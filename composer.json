@@ -1,0 +1,12 @@
+{
+	"name": "saitho/legacy-icons",
+	"type": "typo3-cms-extension",
+	"require": {
+		"typo3/cms-filelist": "^14.0"
+	},
+	"extra": {
+		"typo3/cms": {
+			"extension-key": "legacy_icons"
+		}
+	}
+}
