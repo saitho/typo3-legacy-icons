@@ -1,6 +1,18 @@
 {
 	"name": "saitho/legacy-icons",
 	"type": "typo3-cms-extension",
+	"license": "GPL-2.0-or-later",
+	"authors": [
+		{
+			"name": "Mario Lubenka",
+			"role": "Developer"
+		},
+		{
+			"name": "The TYPO3 Community",
+			"role": "Contributor",
+			"homepage": "https://typo3.org/community/"
+		}
+	],
 	"require": {
 		"typo3/cms-filelist": "^14.0"
 	},
