@@ -1,0 +1,32 @@
+name: Publish Extension to TYPO3 TER
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  publish:
+    name: Publish Extension
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 2: Set up PHP environment
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          extensions: mbstring, curl, zip
+          tools: composer
+
+      # Publish to TYPO3 Extension Repository (TER)
+      - name: Deploy to TER
+        env:
+          TYPO3_API_USERNAME: ${{secrets.TER_USERNAME}}
+          TYPO3_API_PASSWORD: ${{secrets.TER_PASSWORD}}
+          TAG: ${{github.ref_name}}
+        run: composer deploy:ter
