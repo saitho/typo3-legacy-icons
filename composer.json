@@ -1,6 +1,7 @@
 {
 	"name": "saitho/legacy-icons",
 	"type": "typo3-cms-extension",
+	"description": "Legacy Backend Icons - Restores the original colorful icons to TYPO3 CMS v14 backend",
 	"license": "GPL-2.0-or-later",
 	"authors": [
 		{
