@@ -16,16 +16,19 @@ declare(strict_types=1);
 
 use TYPO3\CMS\Core\Utility\ArrayUtility;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 $modules = require(
-    ExtensionManagementUtility::resolvePackagePath('EXT:filelist/Configuration/Backend/Modules.php')
+    ExtensionManagementUtility::resolvePackagePath('EXT:core/Configuration/Backend/Modules.php')
 );
 
 ArrayUtility::mergeRecursiveWithOverrule(
-    $modules, [
-    'media_management' => [
-        'iconIdentifier' => 'module-filelist'
-    ],
-]);
+    $modules,
+    [
+        'media' => [
+            'iconIdentifier' => 'module-file-new',
+        ]
+    ]
+);
 
 return $modules;

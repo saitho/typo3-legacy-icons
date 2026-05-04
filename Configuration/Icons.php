@@ -26,6 +26,12 @@ function overrideIcon(string $name): array {
 }
 
 return array_merge(
+    [
+        'module-file-new' => [
+            'provider' => SvgIconProvider::class,
+            'source' => 'EXT:legacy_icons/Resources/Public/Icons/module-file-new.svg',
+        ],
+    ],
     overrideIcon('module-about'),
     overrideIcon('module-aboutmodules'),
     overrideIcon('module-adminpanel'),
@@ -39,6 +45,7 @@ return array_merge(
     overrideIcon('module-dbint'),
     overrideIcon('module-documentation'),
     overrideIcon('module-extensionmanager'),
+    overrideIcon('module-file'),
     overrideIcon('module-filelist'),
     overrideIcon('module-form'),
     overrideIcon('module-func'),
